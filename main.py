@@ -27,14 +27,14 @@ def rain_expected():
 
 
 if rain_expected():
-    message = f"It will rain today. It would be advisable to remain indoors.{data}"
+    message = "It will rain today. It would be advisable to remain indoors."
     url = f"https://api.telegram.org/{bot_id}/sendMessage?chat_id=8976361824&text={message}"
     r = requests.get(url=url)
     r.raise_for_status()
     d = r.json()
 
 if not rain_expected():
-    message = f"It will not rain today. Brainstorm excuses to not go anywhere.{data}"
+    message = "It will not rain today. Brainstorm excuses to not go anywhere."
     url = f"https://api.telegram.org/{bot_id}/sendMessage?chat_id=8976361824&text={message}"
     r = requests.get(url=url)
     r.raise_for_status()
