@@ -1,6 +1,22 @@
 name: Daily Script
 
 on:
+  schedule:
+    # ╔═══════════════════════════════════════════════════════════════╗
+    # ║  CHANGE THE LINE BELOW to set when your script runs          ║
+    # ║                                                                ║
+    # ║  Format:  'MINUTE HOUR * * *'                                  ║
+    # ║                                                                ║
+    # ║  Examples:                                                     ║
+    # ║    '0 9 * * *'   = 9:00 AM UTC daily                          ║
+    # ║    '30 14 * * *' = 2:30 PM UTC daily                          ║
+    # ║    '0 0 * * *'   = Midnight UTC daily                         ║
+    # ║                                                                ║
+    # ║  Use https://time.is/UTC to find your local time in UTC       ║
+    # ╚═══════════════════════════════════════════════════════════════╝
+    - cron: '0 9 * * *'
+
+  # This adds a "Run workflow" button so you can test manually
   workflow_dispatch:
 
 jobs:
