@@ -1,9 +1,9 @@
 import requests
 import os
 
-api_key = os.environ.get(API_KEY)
+api_key = os.environ.get("API_KEY")
 OWM_Endpoint = "https://api.openweathermap.org/data/2.5/forecast?"
-bot_id = os.environ.get(BOT_ID)
+bot_id = os.environ.get("BOT_ID")
 
 parameters = {
     "lat": 33.9528,
