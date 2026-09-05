@@ -1,4 +1,2 @@
-pandas
-datetime
-smtplib
-random
+requests
+os
